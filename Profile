@@ -1,16 +1,44 @@
 //Миньков 22исп2-1 базовый уровень  15 вариант 2.3 Операторы выбора вариантов 
-Console.WriteLine("Введите координаты точек А");
-Console.WriteLine("Введите x :");
-double x = double.Parse(Console.ReadLine());
-Console.WriteLine("Введите y :");
-double y = double.Parse(Console.ReadLine());
-if (x > 0 && y < 0)
-{  
-    Console.WriteLine("Точка A лежит в четвертой четверти"); 
-}
 
+Console.Write("Введите вариант точек от одного до трех: ");
+int variant = int.Parse(Console.ReadLine());
 
-else 
+switch(variant)
 {
-    Console.WriteLine("Точка A  НЕ лежит в четвертой четверти");
+    case 1:
+        double x1 = -2.2, y1 = -6;
+        Console.Write("Kоординаты точек А {-2.2; -6}");
+        if (x1 > 0 && y1 < 0)
+            Console.WriteLine("Точка A лежит в четвертой четверти");
+           
+        else Console.WriteLine("Точка A  НЕ лежит в четвертой четверти");
+
+        break;
+
+    case 2:
+        double x2 = 5.3, y2 = 3;
+
+        Console.Write("Kоординаты точек А {5.3; 3}");
+        if (x2 > 0 && y2 < 0)
+            Console.WriteLine("Точка A лежит в четвертой четверти");
+
+        else Console.WriteLine("Точка A  НЕ лежит в четвертой четверти");
+
+        break;
+
+    case 3:
+        double x3 = 0.8, y3 = -4;
+
+        Console.Write("Kоординаты точек А {0.8; -4}");
+        if (x3 > 0 && y3 < 0)
+            Console.WriteLine("Точка A лежит в четвертой четверти");
+
+        else Console.WriteLine("Точка A  НЕ лежит в четвертой четверти");
+
+        break;
+    default:
+        Console.WriteLine("Такого варианта нет число должно быть от 1 до 3 " + 
+            "включительно");
+        break;
+
 }
